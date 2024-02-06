@@ -5,7 +5,7 @@ const router = express.Router();
 
 const carModel = require('./cars-model');
 const{  checkCarId, checkCarPayload, checkVinNumberValid, checkVinNumberUnique} = require('./cars-middleware');
-
+//const vinNumber = require('vin-validator')
 
 
 router.get('/', async (req, res, next) => {
@@ -18,11 +18,11 @@ router.get('/', async (req, res, next) => {
 })
 
 
-router.get('/:id', checkCarId, async (req, res) => {
-    res.status(200).json(req.CarId);
+router.get('/:id', checkCarId, async (req, res, next) => {
+    res.status(200).json(req.car);
 })
 
-router.post('/', checkCarPayload, checkVinNumberUnique, checkVinNumberValid, async (req, res, next) => {
+router.post('/', checkCarPayload, checkVinNumberValid, checkVinNumberUnique, async (req, res, next) => {
     try {
        const newCar = await carModel.create(req.body);
        res.status(201).json(newCar);

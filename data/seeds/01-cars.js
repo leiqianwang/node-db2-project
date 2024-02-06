@@ -2,7 +2,7 @@
 
     const cars = [
         {
-            vin: '23848923847829341',
+            vin: '1FTPW14V69KB74536',
             make: 'Honda',
             model: 'civic',
             mileage: 98300,
@@ -10,7 +10,7 @@
             transmission: 'automatic',
         },
         {
-            vin: '2384892384781b341',
+            vin: 'KNDJN2A29E7177095',
             make: 'Volkswagen',
             model: 'golf',
             mileage: 48300,
@@ -18,7 +18,7 @@
             transmission: 'automatic',
         },
 {
-        vin: '9l848923847829341',
+        vin: '1FADP3F28EL202068',
         make: 'Ford',
         model: 'focus',
         mileage: 118300,
